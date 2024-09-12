@@ -14,9 +14,8 @@ public class JavaBeansAndBytes {
     String name;
     boolean isOpen;
     int yearFounded;
-    public CoffeeDrink coffee1;
-    public CoffeeDrink coffee2;
     public byte discount;
+    String special;
 
     public static void main(String[] args) {
         // Create a new CoffeeShop instance to run everything.
@@ -54,14 +53,17 @@ public class JavaBeansAndBytes {
 
         // TODO
         // Create two CoffeeDrink objects
-        CoffeeDrink coffee1 = new CoffeeDrink(1,"iced coffee",false);
+        CoffeeDrink coffee1 = new CoffeeDrink(1,"Milk",false);
         CoffeeDrink coffee2 = new CoffeeDrink(2,"hot chocolate",true);
+
 
         // TODO
         // Print out the order details
         coffee1.printInfo();
         coffee2.printInfo();
 
+        String newSpecial = coffee2.getFlavor();
+        specialOfTheDay(newSpecial);
 
     }
 
@@ -81,6 +83,7 @@ public class JavaBeansAndBytes {
         // Make this method accept a parameter representing the day’s special.
         // Print the day's special.
         System.out.println("Today's special is "+specialParam+".");
+        special = specialParam;
     }
 
     // Method to show loops
