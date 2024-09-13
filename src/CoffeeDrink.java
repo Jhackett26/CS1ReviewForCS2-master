@@ -7,7 +7,7 @@ class CoffeeDrink {
     private boolean hasWhippedCream = false;
 
     // Constructor for CoffeeDrink class
-    public CoffeeDrink(int numCups,String flavor, boolean hasWhippedCream) {
+    public CoffeeDrink(int numberOfCups,String flavor, boolean hasWhippedCream) {
         // TODO
         // Edit this constructor to accept three parameters,
         // one for each CoffeeDrink variable.
@@ -42,5 +42,17 @@ class CoffeeDrink {
     }
     public String getFlavor(){
         return flavor;
+    }
+    public void setNumCups(int newNumCups){
+        numberOfCups = newNumCups;
+    }
+    public int getNumCups(){
+        return numberOfCups;
+    }
+    public void setHasWc(boolean newHasWC){
+        hasWhippedCream = newHasWC;
+    }
+    public boolean getHasWC(){
+        return hasWhippedCream;
     }
 }

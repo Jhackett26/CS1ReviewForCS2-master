@@ -60,10 +60,28 @@ public class JavaBeansAndBytes {
         // TODO
         // Print out the order details
         coffee1.printInfo();
-        coffee2.printInfo();
+
+        coffee2.setHasWc(false);
+        coffee2.setNumCups(1);
+        coffee2.setFlavor("guava");
 
         String newSpecial = coffee2.getFlavor();
         specialOfTheDay(newSpecial);
+
+        System.out.print("Your order is "+coffee2.getNumCups());
+        if(coffee2.getNumCups()==1){
+            System.out.print(" cup ");
+        }
+        else{
+            System.out.print(" cups ");
+        }
+        System.out.print("of "+coffee2.getFlavor());
+        if(coffee2.getHasWC()){
+            System.out.println(" with whipped cream.");
+        }
+        else{
+            System.out.println(" without whipped cream.");
+        }
 
     }
 
